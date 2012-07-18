@@ -21,7 +21,12 @@ Build-Depends:
  librestlet-java,
  libslf4j-java,
  libthrift-java,
- thrift-compiler
+ thrift-compiler,
+ libjs-twitter-bootstrap,
+ libjs-backbone,
+ libjs-jquery,
+ libjs-underscore,
+ yui-compressor
 Standards-Version: 3.9.3
 Homepage: http://floodlight.openflowhub.org/
 
