@@ -1,4 +1,4 @@
-floodlight (0.85-0ubuntu1~ppa2) UNRELEASED; urgency=low
+floodlight (0.85-0ubuntu1~ppa2) quantal; urgency=low
 
   * Switched logging to /var/log/floodlight with suitable logrotate
     configuration, added sensible default logging configuration.
@@ -10,7 +10,7 @@ floodlight (0.85-0ubuntu1~ppa2) UNRELEASED; urgency=low
     footprint.
   * Added support for setting JVM_OPTS in daemon process.
 
- -- James Page <james.page@ubuntu.com>  Wed, 18 Jul 2012 10:07:06 +0100
+ -- James Page <james.page@ubuntu.com>  Wed, 18 Jul 2012 10:49:30 +0100
 
 floodlight (0.85-0ubuntu1~ppa1) quantal; urgency=low
 
