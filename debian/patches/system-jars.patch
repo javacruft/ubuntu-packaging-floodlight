@@ -1,5 +1,15 @@
---- a/build.xml
-+++ b/build.xml
+Description: Update upstream build configuration to pickup
+ jar files from /usr/share/java and both build time and
+ runtime.
+ .
+ Disable test suite execution as required deps not packaged
+Author: Rich Lane <rlane@bigswitch.com>
+Forwared: not-needed
+
+Index: ubuntu-packaging-floodlight/build.xml
+===================================================================
+--- ubuntu-packaging-floodlight.orig/build.xml	2012-07-17 16:51:57.836866878 +0100
++++ ubuntu-packaging-floodlight/build.xml	2012-07-18 10:06:59.796268351 +0100
 @@ -46,24 +46,24 @@
      <property name="thrift.package" value="net/floodlightcontroller/packetstreamer/thrift"/>
      <property name="ant.build.javac.source" value="1.6"/>
@@ -32,7 +42,7 @@
 +        <include name="restlet-jackson.jar"/>
 +        <include name="restlet-simple.jar"/>
 +        <include name="restlet-slf4j.jar"/>
-+        <include name="simple-http.jar"/>
++        <include name="simple.jar"/>
 +        <include name="netty.jar"/>
 +        <include name="args4j.jar"/>
 +        <include name="concurrentlinkedhashmap-lru.jar"/>

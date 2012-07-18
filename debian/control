@@ -29,7 +29,7 @@ Package: floodlight
 Architecture: all
 Depends:
  adduser,
- default-jre | java6-runtime,
+ default-jre-headless | java6-runtime-headless,
  jython,
  libantlr-java,
  libargs4j-java,

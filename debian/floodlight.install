@@ -1,3 +1,4 @@
 debian/misc/floodlight usr/bin
+debian/misc/logback.xml etc/floodlight
 src/main/resources/floodlightdefault.properties etc/floodlight
 target/floodlight.jar usr/share/floodlight/java

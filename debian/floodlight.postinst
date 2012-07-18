@@ -8,6 +8,7 @@ case "$1" in
             adduser --quiet --group --system --disabled-password \
                 --no-create-home --home /dev/null $NAME
         fi
+        chown -R $NAME:$NAME /var/log/floodlight
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

@@ -1,6 +1,7 @@
 # floodlight - A Java-based OpenFlow controller
 #
 # The Floodlight program configures network switches using the OpenFlow protocol.
+# vim: set filetype=upstart :
 
 description	"Floodlight controller"
 
@@ -12,7 +13,14 @@ setgid floodlight
 
 respawn
 
+pre-start script
+    [ -f /usr/share/floodlight/java/floodlight.jar ] || exit 0
+end script
+
 script
     . /etc/default/floodlight
-    exec floodlight $DAEMON_OPTS
+    exec java ${JVM_OPTS} -Dpython.home=/usr/share/jython \
+        -Dlogback.configurationFile=/etc/floodlight/logback.xml \
+        -jar /usr/share/floodlight/java/floodlight.jar \
+        $DAEMON_OPTS 2>&1 >> /var/log/floodlight/floodlight.log
 end script

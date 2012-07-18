@@ -1,3 +1,9 @@
+Description: Add additional dependencies for jython as
+ what ships in Debian works a little differently to 
+ upstream jar files (which jarjar).
+Author: Rich Lane <rlane@bigswitch.com>
+Forwarded: not-needed
+
 --- a/build.xml
 +++ b/build.xml
 @@ -64,6 +64,9 @@

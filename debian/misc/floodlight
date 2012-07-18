@@ -1,2 +1,5 @@
 #!/bin/sh
-exec java -jar /usr/share/floodlight/java/floodlight.jar "$@"
+
+JAVA_ARGS="-Dpython.home=/usr/share/jython"
+
+exec java $JAVA_ARGS -jar /usr/share/floodlight/java/floodlight.jar "$@"
