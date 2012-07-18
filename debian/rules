@@ -21,9 +21,9 @@ override_dh_auto_test-indep:
 
 override_dh_auto_build:
 	mkdir -p src/main/resources/web/lib
-	ln -s /usr/share/javascript/backbone/backbone.min.js src/main/resources/web/lib
+	ln -s /usr/share/javascript/backbone/backbone.min.js src/main/resources/web/lib/backbone-min.js
 	ln -s /usr/share/javascript/jquery/jquery.min.js src/main/resources/web/lib
-	ln -s /usr/share/javascript/underscore/underscore.min.js src/main/resource/web/lib/underscore-min.js
+	ln -s /usr/share/javascript/underscore/underscore.min.js src/main/resources/web/lib/underscore-min.js
 	ln -s /usr/share/javascript/twitter-bootstrap/js/bootstrap-alert.js src/main/resources/web/lib
 	ln -s /usr/share/javascript/twitter-bootstrap/js/bootstrap-dropdown.js src/main/resources/web/lib
 	yui-compressor debian/misc/d3.v2.js > src/main/resources/web/lib/d3.v2.min.js
