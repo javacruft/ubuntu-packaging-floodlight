@@ -13,7 +13,7 @@ tar -xzf $TAR -C $DIR --strip-components=1
 GZIP=--best tar -czf $NEWTAR --exclude '*.jar' --exclude '*.class' \
         --exclude 'backbone-min.js' --exclude 'bootstrap-*.js' \
         --exclude 'jquery.min.js' --exclude 'underscore-min.js' \
-        --exclude 'd3.v2.min.js' $DIR
+        --exclude 'd3.v2.min.js' --exclude 'bootstrap.css' $DIR
 
 rm -rf $DIR $TAR
 

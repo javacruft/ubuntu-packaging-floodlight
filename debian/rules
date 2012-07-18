@@ -21,14 +21,17 @@ override_dh_auto_test-indep:
 
 override_dh_auto_build:
 	mkdir -p src/main/resources/web/lib
+	# Floodlight statically links these JS files into the floodlight jar archive
+	# which is why they are build-depends and not runtime depends.
 	ln -s /usr/share/javascript/backbone/backbone.min.js src/main/resources/web/lib/backbone-min.js
 	ln -s /usr/share/javascript/jquery/jquery.min.js src/main/resources/web/lib
 	ln -s /usr/share/javascript/underscore/underscore.min.js src/main/resources/web/lib/underscore-min.js
 	ln -s /usr/share/javascript/twitter-bootstrap/js/bootstrap-alert.js src/main/resources/web/lib
 	ln -s /usr/share/javascript/twitter-bootstrap/js/bootstrap-dropdown.js src/main/resources/web/lib
+	ln -s /usr/share/javascript/twitter-bootstrap/css/bootstrap.css src/main/resources/css
 	yui-compressor debian/misc/d3.v2.js > src/main/resources/web/lib/d3.v2.min.js
 	dh_auto_build
 
 override_dh_auto_clean:
-	rm -f src/main/resources/web/lib/*.js
+	rm -f src/main/resources/web/lib/*.js src/main/resources/css/bootstrap.css
 	dh_auto_clean
