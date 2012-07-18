@@ -18,6 +18,12 @@ Files: src/main/resources/web/js/*
 Copyright: 2012, IBM
 License: Apache-2.0
 
+Files: src/main/resources/web/css/bootstrap.css
+Copyright: 2012, Twitter Inc.
+License: Apache-2.0
+Comment: This file has been modified from the original upstream version 
+ provided by libjs-twitter-bootstrap so it retained in this package.
+
 Files: debian/*
 Copyright: 2012 Big Switch Networks <rlane@bigswitch.com>,
            2012 Canonical Ltd (http://www.canonical.com)
